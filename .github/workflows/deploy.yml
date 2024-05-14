@@ -24,4 +24,4 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USERNAME }}/threadly-frontend:latest
 
       - name: Call webhook post
-        run: curl -X POST -H "Content-Type: application/json" -d  ${{ secrets.WEBHOOK_URL }}
+        run: curl -X POST -H "Content-Type: application/json" -d '{}' ${{ secrets.WEBHOOK_URL }}
