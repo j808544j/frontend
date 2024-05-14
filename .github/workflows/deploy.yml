@@ -22,3 +22,6 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/threadly-frontend:latest
+
+      - name: Trigger Webhook
+        run: curl ${{ secrets.WEBHOOK_URL }}
