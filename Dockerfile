@@ -25,7 +25,7 @@ WORKDIR /app
 # Copy the built app from the builder stage to the container
 COPY --from=builder /app/dist /app/dist
 
-# Expose port 3000
+# Expose port 5147
 EXPOSE 5147
 
 # Start the HTTP server to serve the built React app
